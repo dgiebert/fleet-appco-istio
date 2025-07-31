@@ -4,6 +4,9 @@ helm:
   releaseName: jaeger
   version: 2.57.0
   chart: oci://dp.apps.rancher.io/charts/jaeger-operator
+  values:
+    rbac:
+      clusterRole: true
 
 labels:
   app: jaeger
