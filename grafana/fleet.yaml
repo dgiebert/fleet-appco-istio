@@ -15,5 +15,11 @@ helm:
           url: http://prometheus-server
           access: proxy
           isDefault: true
+    dashboards:
+      default:
+        prometheus-stats:
+          gnetId: 7639
+          revision: 1
+          datasource: Prometheus
 labels:
   app: grafana
