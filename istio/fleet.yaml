@@ -20,7 +20,7 @@ helm:
         - name: jaeger
           opentelemetry:
             port: 4317
-            service: jaeger-collector.istio-system.svc.cluster.local
+            service: jaeger-app-collector.istio-system.svc.cluster.local
 
 dependsOn:
   - selector:
