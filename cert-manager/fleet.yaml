@@ -1,11 +1,11 @@
-defaultNamespace: istio-system
+defaultNamespace: cert-manager
 name: cert-manager
 
 helm:
   releaseName: cert-manager
   version: 1.18.2
   chart: oci://dp.apps.rancher.io/charts/cert-manager
-  valuesContent: |-
+  values: 
     crds:
       enabled: true
 
