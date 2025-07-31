@@ -17,12 +17,12 @@ helm:
           isDefault: true
     dashboards:
       default:
-        prometheus-stats:
+        istio-mesh-dashboard:
           gnetId: 7639
           revision: 262
           datasource: Prometheus
 labels:
   app: grafana
 
-
+# https://rancher.giebert.dev/k8s/clusters/c-m-qf2m8k7c/api/v1/namespaces/istio-system/services/http:grafana:80/proxy/
 # rRVX4sltTBCTYK8SlAjTBbL32T35gx0LvbKKGwrb
