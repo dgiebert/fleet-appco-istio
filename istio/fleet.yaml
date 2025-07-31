@@ -8,6 +8,9 @@ helm:
   values:
     gateway:
       enabled: true
+      service:
+        annotations:
+          cloudprovider.harvesterhci.io/ipam: dhcp
     istiod:
       meshConfig:
         enableTracing: true
