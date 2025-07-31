@@ -1,4 +1,4 @@
-defaultNamespace: istio-system
+7645-defaultNamespace: istio-system
 name: grafana
 
 helm:
@@ -15,12 +15,25 @@ helm:
           url: http://prometheus-server
           access: proxy
           isDefault: true
+          editable: false
     dashboards:
       default:
         istio-mesh-dashboard:
           gnetId: 7639
           revision: 262
-          datasource: Prometheus
+        istio-service-dashboard:
+          gnetId: 7636
+          revision: 262
+        istio-workload-dashboard:
+          gnetId: 7630
+          revision: 262
+        istio-performance-dashboard:
+          gnetId: 11829
+          revision: 262
+        istio-control-plane-dashboard:
+          gnetId: 7645
+          revision: 262
+
 labels:
   app: grafana
 
