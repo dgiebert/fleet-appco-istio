@@ -19,7 +19,10 @@ helm:
       default:
         prometheus-stats:
           gnetId: 7639
-          revision: 1
+          revision: 262
           datasource: Prometheus
 labels:
   app: grafana
+
+
+# rRVX4sltTBCTYK8SlAjTBbL32T35gx0LvbKKGwrb
