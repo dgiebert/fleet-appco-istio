@@ -1,4 +1,5 @@
 defaultNamespace: istio-system
+name: cert-manager
 
 helm:
   releaseName: cert-manager
@@ -7,3 +8,6 @@ helm:
   valuesContent: |-
     crds:
       enabled: true
+
+labels:
+  app: cert-manager

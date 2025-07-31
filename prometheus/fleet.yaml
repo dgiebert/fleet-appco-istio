@@ -1,4 +1,5 @@
 defaultNamespace: istio-system
+name: prometheus
 
 helm:
   releaseName: prometheus

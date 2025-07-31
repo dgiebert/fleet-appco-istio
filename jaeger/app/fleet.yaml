@@ -1,5 +1,5 @@
 defaultNamespace: istio-system
-
+name: jaeger
 helm:
   releaseName: jaeger
   version: 2.57.0
@@ -7,3 +7,8 @@ helm:
 
 labels:
   app: jaeger
+
+dependsOn:
+  - selector:
+      matchLabels:
+        app: cert-manager

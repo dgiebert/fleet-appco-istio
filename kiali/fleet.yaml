@@ -1,5 +1,6 @@
 defaultNamespace: istio-system
-
+name: kiali
+ 
 helm:
   releaseName: kiali
   version: 2.13.0

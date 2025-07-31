@@ -1,4 +1,5 @@
 defaultNamespace: istio-system
+name: jaeger-config
 
 dependsOn:
   - selector:
