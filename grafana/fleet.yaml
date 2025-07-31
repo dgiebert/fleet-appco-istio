@@ -5,6 +5,15 @@ helm:
   releaseName: grafana
   version: 9.2.10
   chart: oci://dp.apps.rancher.io/charts/grafana
-
+  values:
+    datasources:
+      datasources.yaml:
+        apiVersion: 1
+        datasources:
+        - name: Prometheus
+          type: prometheus
+          url: http://prometheus-server
+          access: proxy
+          isDefault: true
 labels:
   app: grafana
