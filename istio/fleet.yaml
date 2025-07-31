@@ -1,0 +1,24 @@
+defaultNamespace: istio-system
+
+helm:
+  releaseName: istio
+  version: 0.8.3
+  chart: oci://dp.apps.rancher.io/charts/istio
+  values:
+    gateway:
+      enabled: true
+    istiod:
+      meshConfig:
+        enableTracing: true
+        defaultConfig:
+          tracing: {} # disable legacy MeshConfig tracing options
+        extensionProviders:
+        - name: jaeger
+          opentelemetry:
+            port: 4317
+            service: jaeger-app-collector.istio-system.svc.cluster.local
+
+dependsOn:
+  - selector:
+      matchLabels:
+        app: jaeger

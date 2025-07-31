@@ -1,0 +1,6 @@
+defaultNamespace: istio-system
+
+dependsOn:
+  - selector:
+      matchLabels:
+        app: jaeger

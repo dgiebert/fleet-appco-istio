@@ -1,0 +1,29 @@
+defaultNamespace: istio-system
+
+helm:
+  releaseName: kiali
+  version: 2.13.0
+  chart: oci://dp.apps.rancher.io/charts/kiali
+  values:
+    external_services:
+      prometheus.url: "http://prometheus-server.istio-system"
+      prometheus.custom_metrics_url: "http://prometheus-server.istio-system"
+    grafana:
+      enabled: true
+      auth:
+        password: "test_pass"
+        type: "basic"
+        username: "test_user"
+      internal_url: "http://grafana.istio-system"
+      external_url: "http://grafana.istio-system"
+      dashboards:
+      - name: "Istio Performance Dashboard"
+
+
+dependsOn:
+  - selector:
+      matchLabels:
+        app: jaeger
+  - selector:
+      matchLabels:
+        app: grafana

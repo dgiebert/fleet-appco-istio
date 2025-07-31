@@ -1,0 +1,9 @@
+defaultNamespace: istio-system
+
+helm:
+  releaseName: grafana
+  version: 9.2.10
+  chart: oci://dp.apps.rancher.io/charts/grafana
+
+labels:
+  app: prometheus
