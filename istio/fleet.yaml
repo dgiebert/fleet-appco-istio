@@ -23,3 +23,16 @@ dependsOn:
   - selector:
       matchLabels:
         app: jaeger
+
+diff:
+  comparePatches:
+  - apiVersion: admissionregistration.k8s.io/v1
+    kind: ValidatingWebhookConfiguration
+    name: istio-validator-istio-system
+    operations:
+    - {"op": "remove", "path":"/webhooks"}
+  - apiVersion: admissionregistration.k8s.io/v1
+    kind: ValidatingWebhookConfiguration
+    name: istiod-default-validator
+    operations:
+    - {"op": "remove", "path":"/webhooks"}
