@@ -12,7 +12,7 @@ helm:
         custom_metrics_url: "http://rancher-monitoring-prometheus-server.cattle-monitoring-system"
       tracing:
         use_grpc: true
-        internal_url: "http://jaeger-app-query.istio-system:16685/jaeger"
+        internal_url: "http://jaeger-query.istio-system:16685/jaeger"
       grafana:
         enabled: true
         internal_url: "http://rancher-monitoring-grafana.cattle-monitoring-system.svc:80"
