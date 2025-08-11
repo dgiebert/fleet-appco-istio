@@ -1,5 +1,5 @@
 defaultNamespace: cattle-monitoring-system
-name: rancher-monitoring-grafan
+name: rancher-monitoring-grafana
 
 helm:
   releaseName: rancher-monitoring-grafana
@@ -12,7 +12,7 @@ helm:
         datasources:
         - name: Prometheus
           type: prometheus
-          url: http://prometheus-server
+          url: http://rancher-monitoring-prometheus-server
           access: proxy
           isDefault: true
           editable: false
