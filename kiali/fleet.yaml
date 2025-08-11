@@ -23,6 +23,7 @@ helm:
           type: "basic"
           username: "admin"
         internal_url: "http://rancher-monitoring-grafana.cattle-monitoring-system.svc:80"
+        external_url: "http://rancher-monitoring-grafana.cattle-monitoring-system.svc:80"
     server:
       web_root: '/k8s/clusters/${ index .ClusterLabels "management.cattle.io/cluster-name" }/api/v1/namespaces/istio-system/services/http:kiali:20001/proxy/kiali'
 
