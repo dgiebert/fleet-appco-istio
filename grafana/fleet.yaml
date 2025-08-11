@@ -1,4 +1,4 @@
-defaultNamespace: istio-system
+defaultNamespace: cattle-monitoring-system
 name: grafana
 
 helm:
