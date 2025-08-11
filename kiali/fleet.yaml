@@ -6,6 +6,7 @@ helm:
   version: 2.13.0
   chart: oci://dp.apps.rancher.io/charts/kiali
   values:
+
     external_services:
       prometheus:
         url: "http://rancher-monitoring-prometheus-server.cattle-monitoring-system"
@@ -15,6 +16,10 @@ helm:
         internal_url: "http://jaeger-query.istio-system:16685/jaeger"
       grafana:
         enabled: true
+        auth:
+          password: "gWoctt9PFWikVRxh30suKh93AmoG97BlrpIQ5wWJ"
+          type: "basic"
+          username: "admin"
         internal_url: "http://rancher-monitoring-grafana.cattle-monitoring-system.svc:80"
 
 dependsOn:
