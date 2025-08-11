@@ -6,6 +6,9 @@ helm:
   version: 2.13.0
   chart: oci://dp.apps.rancher.io/charts/kiali
   values:
+    deployment:
+      pod_annotations:
+        proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }'
     external_services:
       prometheus:
         url: "http://rancher-monitoring-prometheus-server.cattle-monitoring-system"
