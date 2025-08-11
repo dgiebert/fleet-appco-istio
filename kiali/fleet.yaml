@@ -7,19 +7,12 @@ helm:
   chart: oci://dp.apps.rancher.io/charts/kiali
   values:
     external_services:
-      prometheus.url: "http://prometheus-server.cattle-monitoring-system"
-      prometheus.custom_metrics_url: "http://prometheus-server.cattle-monitoring-system"
-    grafana:
-      enabled: true
-      auth:
-        password: "test_pass"
-        type: "basic"
-        username: "test_user"
-      internal_url: "http://grafana.cattle-monitoring-system"
-      external_url: "http://grafana.cattle-monitoring-system"
-      dashboards:
-      - name: "Istio Performance Dashboard"
-
+      prometheus:
+        url: "http://rancher-monitoring-prometheus-server.cattle-monitoring-system"
+        custom_metrics_url: "http://rancher-monitoring-prometheus-server.cattle-monitoring-system"
+      tracing:
+        use_grpc: true
+        internal_url: "http://jaeger-app-query.istio-system:16685/jaeger"
 
 dependsOn:
   - selector:
