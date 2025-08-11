@@ -1,0 +1,7 @@
+defaultNamespace: cattle-monitoring-system
+name: rancher-monitoring-config
+
+dependsOn:
+  - selector:
+      matchLabels:
+        app: prometheus
