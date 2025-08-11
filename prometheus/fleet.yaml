@@ -1,8 +1,8 @@
 defaultNamespace: cattle-monitoring-system
-name: prometheus
+name: rancher-monitoring
 
 helm:
-  releaseName: prometheus
+  releaseName: rancher-monitoring
   version: 27.28.2
   chart: oci://dp.apps.rancher.io/charts/prometheus
 

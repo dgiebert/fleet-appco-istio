@@ -1,8 +1,8 @@
 defaultNamespace: cattle-monitoring-system
-name: grafana
+name: rancher-monitoring-grafan
 
 helm:
-  releaseName: grafana
+  releaseName: rancher-monitoring-grafana
   version: 9.2.10
   chart: oci://dp.apps.rancher.io/charts/grafana
   values:
